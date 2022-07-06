@@ -1,5 +1,5 @@
 # Management Module Recipes
-School Project - My first Java desktop application.
+> #SchoolProject #MyFirstJavaDesktopApplication.
 
 <h3>Project Description</h3>
 
@@ -14,3 +14,16 @@ For this you need a <b>management module recipes</b> for better control. The ban
 
 All transactions must be operating system date and time.
 Create a program should be able to solve the problem referenced above , employ all the resources of the object-oriented programming.
+
+<h3>Tools</h3>
+<ul>
+    <li>Oracle OpenJDK version 18.0.1</li>
+    <li><a href="https://github.com/sshahine/JFoenix">JFoenix</a></li>
+    <li>Java FX</li>
+    <li><a href="https://projectlombok.org/">Lombok</a></li>
+</ul>
+
+<h3>How to run</h3>
+Load all dependencies and add JFoenix library.
+
+
