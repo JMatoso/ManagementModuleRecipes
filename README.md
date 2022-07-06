@@ -24,6 +24,14 @@ Create a program should be able to solve the problem referenced above , employ a
 </ul>
 
 <h3>How to run</h3>
+
 Load all dependencies and add JFoenix library.
+
+<h3>Application Screens<h3>
+
+![Login Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/login.png?raw=true)
+![Users Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/users.png?raw=true)
+![Add User Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/add-user.png?raw=true)
+![Recipes Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/recipes.png?raw=true)
 
 
