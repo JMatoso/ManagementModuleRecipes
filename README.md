@@ -1,4 +1,4 @@
-# ModuleManagementRecipes
+# Management Module Recipes
 School Project - My first Java desktop application.
 
 <h3>Project Description</h3>
