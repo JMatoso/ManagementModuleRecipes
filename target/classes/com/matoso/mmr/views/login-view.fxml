@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="720.0" minHeight="720.0" minWidth="1080.0" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matoso.mmr.controllers.LoginController">
+    <maxWidth>1080.0</maxWidth>
+   <VBox alignment="CENTER_LEFT" prefHeight="728.0" prefWidth="1087.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.2000000000000455" AnchorPane.topAnchor="0.0" />
+
+    <AnchorPane layoutX="375.0" layoutY="194.0" maxHeight="364.0" prefHeight="360.0" prefWidth="330.0" style="-fx-background-radius: 14; -fx-border-radius: 14; -fx-background-color: white; -fx-opacity: 0.9;">
+        <TextField fx:id="txtBoxEmail" layoutY="128.0" onKeyPressed="#onKeyPressed" prefWidth="269.0" promptText="user@example.com" style="-fx-background-color: #e0e0e0;">
+            <prefHeight>46.0</prefHeight>
+            <layoutX>32.0</layoutX>
+        </TextField>
+        <Label layoutX="32.0" layoutY="103.0" text="Email Address" textAlignment="CENTER" textFill="#46576d">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="txtBoxPwd" layoutY="215.0" onKeyPressed="#onKeyPressed" prefHeight="46.0" prefWidth="270.0" promptText="Enter Password" style="-fx-background-color: #e0e0e0;">
+            <layoutX>31.0</layoutX>
+        </PasswordField>
+        <Label layoutX="32.0" layoutY="191.0" text="Password" textAlignment="CENTER" textFill="#46576d">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="32.0" layoutY="290.0" onAction="#btnLoginClicked" prefHeight="46.0" prefWidth="270.0" style="-fx-background-color: #355b8c; -fx-background-radius: 7; -fx-border-radius: 7;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+        <ImageView fitHeight="70.0" fitWidth="145.0" layoutX="93.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../img/logo-bai.png" />
+        </ImageView>
+      <Label fx:id="lblEmailError" alignment="BOTTOM_RIGHT" layoutX="30.0" layoutY="174.0" prefHeight="17.0" prefWidth="270.0" text="Required field." textFill="RED" visible="false">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPwdError" alignment="BOTTOM_RIGHT" layoutX="30.0" layoutY="261.0" prefHeight="17.0" prefWidth="269.0" text="Required field." textFill="RED" visible="false">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.07999999821186066" />
+            </color>
+         </DropShadow>
+      </effect>
+    </AnchorPane>
+    <Label layoutX="419.0" layoutY="606.0" prefHeight="18.0" prefWidth="243.0" text="All rights reserved. Copyright ©2022" textFill="WHITE" AnchorPane.bottomAnchor="95.60000000000002" AnchorPane.leftAnchor="419.0" AnchorPane.rightAnchor="418.0">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font></Label>
+   <Label layoutY="625.0" text="Group 8 | Programming 2" textFill="WHITE" AnchorPane.bottomAnchor="77.4" AnchorPane.leftAnchor="467.99999999999994" AnchorPane.rightAnchor="467.2">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+       <layoutX>468.0</layoutX>
+   </Label>
+   <styleClass>
+      <String fx:value="anchorPane" />
+      <String fx:value="bg-primary" />
+   </styleClass>
+</AnchorPane>

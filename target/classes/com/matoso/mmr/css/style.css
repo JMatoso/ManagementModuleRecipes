@@ -1,0 +1,90 @@
+.button-title {
+    -fx-font-size: 13;
+}
+
+.titlePanel {
+    -fx-font-size: 77;
+}
+
+.contentPanel {
+    -fx-font-size: 20;
+}
+
+.labelText {
+    -fx-font-size: 14;
+}
+
+.button, .button-menu {
+    -fx-cursor: hand;
+}
+
+.button-menu, .button-menu-red {
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: white;
+}
+
+.button-menu:pressed, .button-menu-red:pressed {
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #023047;
+}
+
+.button-menu:focused, .button-menu-red:focused {
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #023047;
+}
+
+.text-field {
+    -fx-background-color: #f5f5f5;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-border-width: 1px;
+}
+
+.text-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+}
+
+.anchorPane {
+    -fx-background-image: url('../img/bai.jpg');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+}
+
+.column-header {
+    -fx-padding: 5px 5px 5px 5px;
+}
+
+.table-view {
+    -fx-padding: 15px 15px 15px 15px;
+    -fx-background-color:  white;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filter {
+    -fx-cell-size: 20;
+    -fx-background-color: white;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #2d4d76;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .cell {
+    -fx-cell-size: 30;
+    -fx-font-weight: normal;
+    -fx-alignment: center-left;
+    -fx-text-fill: #2d4d76;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(0, 0, 0, .2);
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: black;
+}

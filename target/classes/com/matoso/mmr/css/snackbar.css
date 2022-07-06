@@ -1,0 +1,15 @@
+.jfx-snackbar-content {
+     -fx-background-radius: 14px;
+     -fx-background-color: BLACK;
+     -fx-border-radius: 14px;
+     -fx-opacity: 0.9;
+     -fx-pref-width: 300px;
+}
+
+.jfx-snackbar-toast {
+    -fx-text-fill: WHITE;
+}
+
+.jfx-snackbar-action {
+    -fx-text-fill: #f5f5f5;
+}
