@@ -29,16 +29,9 @@ Load all dependencies and add JFoenix library.
 
 <h3>Application Screens<h3>
 
-<h6>Login Screen</h6>
 ![Login Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/login.png?raw=true)
-
-<h6>Users Screen</h6>
 ![Users Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/users.png?raw=true)
-
-<h6>Add User Screen</h6>
 ![Add User Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/add-user.png?raw=true)
-
-<h6>Add Recipe Screen</h6>
 ![Recipes Screen](https://github.com/JMatoso/ModuleManagementRecipes/blob/main/project-images/recipes.png?raw=true)
 
 
