@@ -29,13 +29,7 @@ public class MMRApplication extends Application {
     }
 
     public static void seedData() {
-        UserContext.add(
-                new User(100, "José Matoso", "matoso@email.com", "matoso", Genre.Male, "Bairro Popular", Role.Worker),
-                new User(200, "Bernarda Gonçalves", "bernarda@email.com", "bernarda", Genre.Female, "São Paulo", Role.Worker),
-                new User(300, "Jeremias Dinzinga", "jeremias@email.com", "jeremias", Genre.Male, "Unknown", Role.Worker),
-                new User(400, "Sara Samuel", "sara@email.com", "sara", Genre.Female, "Talatona", Role.Worker),
-                new User(500, "Joaquim José", "joaquim@email.com", "joaquim", Genre.Male, "Viana", Role.Client),
-                new User(600, "Irene Teresa", "irene@email.com", "irene", Genre.Female, "Maianga", Role.Client));
+        UserContext.add(new User(100, "José Matoso", "matoso@email.com", "matoso", Genre.Male, "Bairro Popular", Role.Worker));
 
         PlanContext.add(
                 new Plan(201, 10, 15, 2, "Base Partner"),
