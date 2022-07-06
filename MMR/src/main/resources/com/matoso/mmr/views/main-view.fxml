@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1111.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matoso.mmr.controllers.MainController">
+
+    <TabPane fx:id="tabPane" layoutX="241.0" layoutY="-31.0" prefHeight="662.0" prefWidth="871.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="241.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-31.0">
+        <Tab fx:id="tabPlans" styleClass="contentPanel" text="Plans">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="612.0" style="-fx-background-color: #F8F9FA;">
+                <TableView fx:id="plansTable" layoutY="86.0" prefHeight="548.0" prefWidth="871.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+                    <columns>
+                        <TableColumn fx:id="plansIdColumn" prefWidth="107.20002746582031" styleClass="column-header" text="ID" />
+                        <TableColumn fx:id="plansNameColumn" prefWidth="92.0" styleClass="column-header" text="Name" />
+                        <TableColumn fx:id="plansPercentageColumn" prefWidth="91.20001220703125" styleClass="column-header" text="Percentage" />
+                        <TableColumn fx:id="plansMonthsColumn" prefWidth="86.39996337890625" styleClass="column-header" text="Months" />
+                        <TableColumn fx:id="plansBonusColumn" prefWidth="119.199951171875" styleClass="column-header" text="Bonus" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="598.0" style="-fx-background-color: white; -fx-border-color: #f5f5f5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                    <Label fx:id="plansLblRegisteredPlans" styleClass="contentPanel" text="Registered Plans" textFill="#023047">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Label>
+                </HBox>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabUsers" styleClass="contentPanel" text="Users">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="612.0" style="-fx-background-color: #F8F9FA;">
+                <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="598.0" style="-fx-background-color: white; -fx-border-color: #f5f5f5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                    <Label fx:id="usersLblRegisteredUsers" styleClass="contentPanel" text="Registered Users" textFill="#023047">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" layoutX="288.0" prefHeight="85.0" prefWidth="310.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="288.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <JFXButton graphicTextGap="10.0" onAction="#onBtnManageUsersClick" prefHeight="46.0" prefWidth="205.0" style="-fx-background-color: #355b8c; -fx-background-radius: 7; -fx-border-radius: 7;" text="Add User" textFill="WHITE">
+                  <graphic>
+                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                          <Image url="@../img/icons/icons8_add_user_male_32px.png" />
+                      </ImageView>
+                  </graphic>
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <HBox.margin>
+                     <Insets right="15.0" top="5.0" />
+                  </HBox.margin>
+               </JFXButton>
+                </HBox>
+            <TableView fx:id="usersTable" layoutY="88.0" prefHeight="546.0" prefWidth="871.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="88.0">
+              <columns>
+                <TableColumn fx:id="usersIdColumn" prefWidth="107.20002746582031" styleClass="column-header" text="ID" />
+                <TableColumn fx:id="usersNameColumn" prefWidth="92.0" styleClass="column-header" text="Name" />
+                  <TableColumn fx:id="usersEmailColumn" prefWidth="91.20001220703125" styleClass="column-header" text="Email" />
+                  <TableColumn fx:id="usersGenreColumn" prefWidth="91.20001220703125" styleClass="column-header" text="Genre" />
+                  <TableColumn fx:id="usersAddressColumn" prefWidth="119.199951171875" styleClass="column-header" text="Address" />
+                  <TableColumn fx:id="usersRoleColumn" prefWidth="86.39996337890625" styleClass="column-header" text="Role" />
+                  <TableColumn fx:id="usersCreatedColumn" prefWidth="119.199951171875" styleClass="column-header" text="Created" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabRecipes" text="Recipes">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="586.0" style="-fx-background-color: #F8F9FA;">
+            <TableView fx:id="recipesTable" layoutY="86.0" prefHeight="551.0" prefWidth="871.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+               <columns>
+                  <TableColumn fx:id="recipeIdColumn" prefWidth="107.20002746582031" styleClass="column-header" text="ID" />
+                  <TableColumn fx:id="recipePlanIdColumn" prefWidth="92.0" styleClass="column-header" text="Plan ID" />
+                  <TableColumn fx:id="recipeUserIdColumn" prefWidth="91.20001220703125" styleClass="column-header" text="User ID" />
+                  <TableColumn fx:id="recipeSalaryColumn" prefWidth="119.199951171875" styleClass="column-header" text="Salary" />
+                  <TableColumn fx:id="recipeInvestmentColumn" prefWidth="119.199951171875" styleClass="column-header" text="Investment" />
+                  <TableColumn fx:id="recipeFinalBalanceColumn" prefWidth="119.199951171875" styleClass="column-header" text="Final Balance" />
+                  <TableColumn fx:id="recipeTotalDebitColumn" prefWidth="119.199951171875" styleClass="column-header" text="Total Debit" />
+                  <TableColumn fx:id="recipeWorkerIdColumn" prefWidth="86.39996337890625" styleClass="column-header" text="Worker ID" />
+                  <TableColumn fx:id="recipeCreatedColumn" prefWidth="119.199951171875" styleClass="column-header" text="Created" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+                <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="871.0" style="-fx-background-color: white; -fx-border-color: #f5f5f5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                    <Label fx:id="recipesLblRegisteredRecipes" styleClass="contentPanel" text="Registered Recipes" textFill="#2d4d76">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" layoutX="260.0" prefHeight="85.0" prefWidth="337.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.7999999999999545" AnchorPane.topAnchor="0.0">
+               <JFXButton graphicTextGap="10.0" onAction="#onBtnManageRecipesClick" prefHeight="46.0" prefWidth="205.0" style="-fx-background-color: #355b8c; -fx-background-radius: 7; -fx-border-radius: 7;" text="Add Recipe" textFill="WHITE">
+                  <graphic>
+                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                          <Image url="@../img/icons/icons8_add_receipt_48px.png" />
+                      </ImageView>
+                  </graphic>
+                  <HBox.margin>
+                     <Insets right="15.0" top="5.0" />
+                  </HBox.margin>
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </JFXButton>
+                </HBox>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabManageUsers" text="Manage Users">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="598.0" style="-fx-background-color: white; -fx-border-color: #f5f5f5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                    <Label prefHeight="30.0" prefWidth="297.0" styleClass="contentPanel" text="Manage Users" textFill="#023047">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <GridPane alignment="CENTER" layoutX="-1.0" layoutY="87.0" prefHeight="344.0" prefWidth="871.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="87.0">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <TextField fx:id="txtUserName" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Name *" styleClass="text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <TextField fx:id="txtUserEmail" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Email Address *" styleClass="text-field" GridPane.columnIndex="2">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <PasswordField fx:id="txtPassword" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Password *" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </PasswordField>
+                    <ComboBox fx:id="cboUsersRole" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Select a role *" style=": ;" styleClass="text-field" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </ComboBox>
+               <Label prefHeight="18.0" prefWidth="415.0" text="Required fields *" textFill="#616161" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+                  <padding>
+                     <Insets left="7.0" right="7.0" />
+                  </padding>
+               </Label>
+               <TextField fx:id="txtUserAddress" layoutX="21.0" layoutY="117.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Address *" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <GridPane.margin>
+                     <Insets left="7.0" right="7.0" />
+                  </GridPane.margin>
+               </TextField>
+               <ComboBox fx:id="cboUsersGenre" layoutX="468.0" layoutY="84.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Select a genre *" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <GridPane.margin>
+                     <Insets left="7.0" right="7.0" />
+                  </GridPane.margin>
+               </ComboBox>
+                    <HBox alignment="CENTER" prefHeight="59.0" prefWidth="310.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <JFXButton fx:id="btnUsersSave" onAction="#onBtnUsersSave" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #355b8c; -fx-border-radius: 7; -fx-background-radius: 7;" text="Save" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <HBox.margin>
+                                <Insets left="7.0" right="7.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                  <JFXButton onAction="#onBtnUsersClear" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: #ebebeb; -fx-border-radius: 7; -fx-background-radius: 7;" text="Clear" textFill="#636363">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                        <JFXButton fx:id="btnUsersRemove" layoutX="17.0" layoutY="18.0" onAction="#onBtnUsersRemove" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #d90429; -fx-border-radius: 7; -fx-background-radius: 7;" text="Remove" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                    </HBox>
+                </GridPane>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="tabManageRecipes" text="Manage Recipes">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="598.0" style="-fx-background-color: white; -fx-border-color: #f5f5f5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                    <Label styleClass="contentPanel" text="Manage Recipes" textFill="#023047">
+                        <font>
+                            <Font size="22.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <GridPane layoutX="-3.0" layoutY="92.0" prefHeight="421.0" prefWidth="877.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="92.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <TextField fx:id="recipeTxtWorkerId" disable="true" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Worker ID" styleClass="text-field" stylesheets="@../css/style.css">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <TextField fx:id="recipeTxtWorkerName" disable="true" layoutX="10.0" layoutY="36.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Worker Name" styleClass="text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <TextField fx:id="recipeTxtPlanId" disable="true" layoutX="10.0" layoutY="36.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Plan ID" styleClass="text-field" stylesheets="@../css/style.css" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <TextField fx:id="recipeTxtUserId" disable="true" layoutX="449.0" layoutY="135.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="User ID" styleClass="text-field" stylesheets="@../css/style.css" GridPane.rowIndex="2">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <TextField fx:id="recipeTxtSalary" layoutX="449.0" layoutY="235.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Salary *" styleClass="text-field" stylesheets="@../css/style.css" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <TextField fx:id="recipeTxtFinalRecipe" disable="true" layoutX="10.0" layoutY="247.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Final Recipe" styleClass="text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <TextField fx:id="recipeTxtInvestment" layoutX="10.0" layoutY="197.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Investment *" styleClass="text-field" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="310.0" GridPane.rowIndex="5">
+                        <JFXButton fx:id="btnRecipeSave" onAction="#onBtnRecipeSave" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #355b8c; -fx-border-radius: 7; -fx-background-radius: 7;" text="Save" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <HBox.margin>
+                                <Insets left="7.0" right="7.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                  <JFXButton onAction="#onBtnRecipesClear" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: #ebebeb; -fx-border-radius: 7; -fx-background-radius: 7;" text="Clear" textFill="#636363">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                        <JFXButton fx:id="btnRecipeRemove" layoutX="17.0" layoutY="18.0" onAction="#onBtnRecipeRemove" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #d90429; -fx-border-radius: 7; -fx-background-radius: 7;" text="Remove" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                    </HBox>
+                    <TextField fx:id="recipeTxtTotalDebit" disable="true" layoutX="449.0" layoutY="258.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Total Debit" styleClass="text-field" stylesheets="@../css/style.css" GridPane.rowIndex="4">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </TextField>
+                    <Label prefHeight="18.0" prefWidth="415.0" text="Required fields *" textFill="#616161" GridPane.rowIndex="6">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                        <padding>
+                            <Insets left="7.0" right="7.0" />
+                        </padding>
+                    </Label>
+                    <ComboBox fx:id="recipeCboPlan" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Select a plan *" style=": ;" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </ComboBox>
+                    <ComboBox fx:id="recipeCboUser" layoutX="449.0" layoutY="76.0" maxWidth="600.0" prefHeight="48.0" prefWidth="269.0" promptText="Select a user *" style=": ;" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <GridPane.margin>
+                            <Insets left="7.0" right="7.0" />
+                        </GridPane.margin>
+                    </ComboBox>
+               <JFXButton onAction="#onBtnRecipeCalculate" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #355b8c; -fx-border-radius: 7; -fx-background-radius: 7;" text="Calculate" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <GridPane.margin>
+                     <Insets left="7.0" right="7.0" />
+                  </GridPane.margin>
+               </JFXButton>
+                </GridPane>
+                <VBox layoutX="550.0" layoutY="514.0" prefHeight="226.0" prefWidth="258.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="15.0">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                    <Label text="Plan Summary" textFill="#023047">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="lblPlanName" text="Plan Name: " textFill="#616161" />
+                    <Label fx:id="lblPlanPercentage" text="Percentage:" textFill="#616161" />
+                    <Label fx:id="lblPlanMonths" text="Months: " textFill="#616161" />
+                    <Label fx:id="lblPlanBonus" text="Bonus:" textFill="#616161" />
+                </VBox>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+    <VBox alignment="TOP_CENTER" prefHeight="629.0" prefWidth="243.0" style="-fx-background-color: white; -fx-border-color: #f5f5f5;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER" prefHeight="86.0" prefWidth="263.0" style="-fx-border-color: #f5f5f5; -fx-border-width: 0px 0px 1px 0px;">
+            <ImageView fitHeight="34.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../img/logo-bai.png" />
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </ImageView>
+        </HBox>
+      <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onBtnPlansClick" prefHeight="40.0" prefWidth="213.0" styleClass="button-menu" text="Plans" textFill="#d6d6d6">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+             <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                 <Image url="@../img/icons/icons8_room_finder_24px.png" />
+             </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="7.0" right="7.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onBtnUsersClick" prefHeight="40.0" prefWidth="212.0" styleClass="button-menu" text="Users" textFill="#d6d6d6">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../img/icons/icons8_staff_24px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="7.0" right="7.0" />
+         </VBox.margin>
+        </Button>
+        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onBtnRecipesClick" prefHeight="40.0" prefWidth="212.0" styleClass="button-menu" text="Recipes" textFill="#d6d6d6">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../img/icons/icons8_bill_24px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="7.0" right="7.0" />
+         </VBox.margin>
+        </Button>
+      <Button fx:id="btnUser" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onBtnUserClick" prefHeight="40.0" prefWidth="212.0" styleClass="button-menu-red" text="John Doe" textFill="#d6d6d6">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+             <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                 <Image url="@../img/icons/icons8_account_24px.png" />
+             </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="15.0" />
+         </VBox.margin>
+      </Button>
+        <TextField fx:id="txtSearch" disable="true" onKeyPressed="#onTxtFieldEnterPressed" prefHeight="42.0" prefWidth="381.0" promptText="Search..." style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-radius: 0; -fx-border-color: #f5f5f5;">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TextField>
+    </VBox>
+    <VBox alignment="BOTTOM_CENTER" layoutY="396.0" prefHeight="236.0" prefWidth="235.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-3.0" AnchorPane.topAnchor="396.0">
+        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onBtnExitClick" prefHeight="40.0" prefWidth="212.0" styleClass="button-menu-red" text="Exit" textFill="#fc738a">
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+           <graphic>
+               <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                   <Image url="@../img/icons/icons8_shutdown_24px_1.png" />
+               </ImageView>
+           </graphic>
+           <padding>
+               <Insets left="20.0" />
+           </padding>
+           <font>
+               <Font name="Arial Bold" size="13.0" />
+           </font>
+           <VBox.margin>
+               <Insets left="7.0" right="7.0" />
+           </VBox.margin>
+        </Button>
+        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onBtnLogoutClick" prefHeight="40.0" prefWidth="212.0" styleClass="button-menu-red" text="Logout" textFill="#fc738a">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../img/icons/icons8_export_24px_1.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+         <font>
+             <Font name="Arial Bold" size="13.0" />
+         </font>
+         <VBox.margin>
+             <Insets bottom="20.0" left="7.0" right="7.0" />
+         </VBox.margin>
+        </Button>
+    </VBox>
+   <StackPane fx:id="stackPane" layoutX="241.0" layoutY="577.0" prefHeight="54.0" prefWidth="871.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="241.0" AnchorPane.rightAnchor="-1.0" />
+</AnchorPane>

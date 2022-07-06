@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="762.0" prefWidth="835.0" styleClass="anchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matoso.mmr.controllers.ClientController">
+   <Pane layoutX="157.0" layoutY="24.0" prefHeight="720.0" prefWidth="542.0" style="-fx-background-color: white; -fx-background-radius: 14; -fx-border-radius: 14; -fx-opacity: 0.9;" AnchorPane.bottomAnchor="18.0" AnchorPane.topAnchor="24.0">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color opacity="0.07999999821186066" />
+            </color>
+         </DropShadow>
+      </effect>
+      <GridPane layoutX="25.0" layoutY="119.0" prefHeight="215.0" prefWidth="494.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <TextField fx:id="txtClientId" disable="true" maxWidth="600.0" prefHeight="46.0" promptText="Client ID">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtClientName" disable="true" layoutX="28.0" layoutY="34.0" maxWidth="600.0" prefHeight="46.0" promptText="Client Name" GridPane.columnIndex="1">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtClientEmail" disable="true" layoutX="161.0" layoutY="34.0" maxWidth="600.0" prefHeight="46.0" promptText="Client Email" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtClientGenre" disable="true" layoutX="20.0" layoutY="88.0" maxWidth="600.0" prefHeight="46.0" promptText="Client Genre" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtClientAddress" disable="true" layoutX="161.0" layoutY="88.0" maxWidth="600.0" prefHeight="46.0" promptText="Client Address" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtClientRole" disable="true" layoutX="20.0" layoutY="141.0" maxWidth="600.0" prefHeight="46.0" promptText="Client Role" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+      </GridPane>
+      <ImageView fitHeight="70.0" fitWidth="145.0" layoutX="199.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../img/logo-bai.png" />
+      </ImageView>
+      <Label layoutX="50.0" layoutY="99.0" text="Personal Details" textFill="#46576d">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="331.0" text="Recipe Details" textFill="#46576d">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="25.0" layoutY="357.0" prefHeight="136.0" prefWidth="494.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <TextField fx:id="txtRecipeSalary" disable="true" maxWidth="600.0" prefHeight="46.0" promptText="Salary">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtRecipeInvestment" disable="true" layoutX="28.0" layoutY="34.0" maxWidth="600.0" prefHeight="46.0" promptText="Investment" GridPane.columnIndex="1">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtRecipeTotalDebit" disable="true" layoutX="161.0" layoutY="34.0" maxWidth="600.0" prefHeight="46.0" promptText="Total Debit" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="txtRecipeFinal" disable="true" layoutX="20.0" layoutY="88.0" maxWidth="600.0" prefHeight="46.0" promptText="Final Recipe" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="7.0" right="7.0" />
+            </GridPane.margin>
+         </TextField>
+      </GridPane>
+      <VBox layoutX="40.0" layoutY="493.0" prefHeight="125.0" prefWidth="462.0" style="-fx-background-color: white; -fx-border-radius: 7; -fx-background-radius: 7; -fx-border-color: #f5f5f5;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.009999999776482582" />
+               </color>
+            </DropShadow>
+         </effect>
+         <Label text="Plan Summary" textFill="#46576d">
+            <font>
+               <Font name="Arial Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblPlanName" text="Plan Name">
+            <VBox.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="lblPlanMonths" text="Plan Months">
+            <VBox.margin>
+               <Insets bottom="2.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="lblPlanPercentage" text="Percentage">
+            <VBox.margin>
+               <Insets bottom="2.0" />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="lblPlanBonus" text="Bonus" />
+      </VBox>
+      <Label fx:id="lblRegisterInfo" layoutX="40.0" layoutY="628.0" prefHeight="17.0" prefWidth="462.0" text="Added by José Matoso on 12 May, 2022 at 12:33 PM" textFill="#797979">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+   </Pane>
+   <JFXButton layoutX="689.0" layoutY="365.0" onAction="#onBtnExitClick" prefHeight="35.0" prefWidth="133.0" style="-fx-background-color: #FF0A2F;" text="Exit" textFill="WHITE" AnchorPane.rightAnchor="12.400000000000006" AnchorPane.topAnchor="365.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </JFXButton>
+</AnchorPane>
