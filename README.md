@@ -1,8 +1,6 @@
 # Management Module Recipes
 > #SchoolProject #MyFirstJavaDesktopApplication.
 
-<b>I was a collaborator, lol.</b>
-
 <h3>Project Description</h3>
 
 Banco BAI intends to expand its corporate network to increase your income as well as improve your social capital. 
